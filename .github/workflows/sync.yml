@@ -16,6 +16,7 @@ jobs:
       - name: Genereer bookings.json
         env:
           ICAL_URL: ${{ secrets.BOOKING_ICAL_URL }}
+          ICAL_URL_AIRBNB: ${{ secrets.ICAL_URL_AIRBNB }}
         run: node sync.js
       - name: Opslaan indien gewijzigd
         run: |
